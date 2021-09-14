@@ -37,6 +37,11 @@ public class IsolatedWorld {
         }
     }
 
+    public IsolatedWorld takenBy(final UUID takenBy) {
+        this.takenBy = takenBy;
+        return this;
+    }
+
     public GameWorld gameWorld() {
         return this.world;
     }
@@ -47,11 +52,6 @@ public class IsolatedWorld {
 
     public ChosenBlock[] chosenBlocks() {
         return this.chosenBlocks;
-    }
-
-    public IsolatedWorld takenBy(final UUID takenBy) {
-        this.takenBy = takenBy;
-        return this;
     }
 
     public UUID takenBy() {
