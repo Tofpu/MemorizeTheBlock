@@ -17,15 +17,19 @@ public class IsolatedWorldLogic {
         this.worldMap = new HashMap<>();
     }
 
-    public IsolatedWorld isolate(final Player player) {
-        IsolatedWorld isolatedWorld = worldMap.get(player.getUniqueId());
+    public IsolatedWorld isolate(final UUID uuid) {
+        IsolatedWorld isolatedWorld = worldMap.get(uuid);
         if (isolatedWorld == null) {
             isolatedWorld = new IsolatedWorld(gameDirector);
             isolatedWorld.initialize();
-            worldMap.put(player.getUniqueId(), isolatedWorld);
+            worldMap.put(uuid, isolatedWorld);
         }
 
         return isolatedWorld;
+    }
+
+    public void remove(final UUID uuid) {
+        worldMap.remove(uuid);
     }
 
     public GameDirector director() {

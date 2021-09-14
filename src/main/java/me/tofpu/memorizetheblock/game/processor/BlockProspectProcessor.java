@@ -37,7 +37,7 @@ public final class BlockProspectProcessor {
 
     public void result(final GameLogicProcessor logicProcessor, final GamePlayer gamePlayer) {
         final Player player = gamePlayer.player();
-        logicProcessor.remove(player);
+        logicProcessor.remove(player, false);
 
         final boolean[] guesses = new boolean[]{false, false, false};
 

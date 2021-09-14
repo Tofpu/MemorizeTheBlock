@@ -32,7 +32,7 @@ public class MemorizeTicker extends GameTicker {
         final GameLogicProcessor logicProcessor = director.logicProcessor();
 
         for (int i = 0; i < 3; i++) {
-            director.isolatedWorldLogic().isolate(gamePlayer.player()).chosenBlocks()[i].block(Material.AIR);
+            director.isolatedWorldLogic().isolate(gamePlayer.player().getUniqueId()).chosenBlocks()[i].block(Material.AIR);
         }
         if (logicProcessor.timer().isPaused()) logicProcessor.timer().resume();
         logicProcessor.playerDuration().put(gamePlayer, Instant.now());

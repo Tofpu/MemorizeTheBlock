@@ -25,7 +25,7 @@ public class GamePlayer {
         this.player = Bukkit.getPlayer(uniqueId);
 
         this.chosenBlocks = new ArrayList<>();
-        this.pickedBlocks = new ArrayList<>(Arrays.asList(director.isolatedWorldLogic().isolate(player).chosenBlocks()));
+        this.pickedBlocks = new ArrayList<>(Arrays.asList(director.isolatedWorldLogic().isolate(uniqueId).chosenBlocks()));
         this.itemStacks = new Stack<>();
     }
 

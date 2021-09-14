@@ -51,7 +51,7 @@ public class GameLogicProcessor {
     }
 
     public void join(final Player player) {
-        final IsolatedWorld isolatedWorld = director.isolatedWorldLogic().isolate(player);
+        final IsolatedWorld isolatedWorld = director.isolatedWorldLogic().isolate(player.getUniqueId());
         join(isolatedWorld, get(player));
     }
 
@@ -62,7 +62,7 @@ public class GameLogicProcessor {
         return new GamePlayer(director, player.getUniqueId());
     }
 
-    public void remove(final Player player) {
+    public void remove(final Player player, boolean quitting) {
         if (!isPlaying(player)) return;
         final GamePlayer gamePlayer = get(player);
 
@@ -70,6 +70,7 @@ public class GameLogicProcessor {
 
         players.remove(gamePlayer);
         playerDuration.remove(gamePlayer);
+        if (quitting) director.isolatedWorldLogic().remove(gamePlayer.uniqueId());
     }
 
     public boolean isPlaying(final Player player) {

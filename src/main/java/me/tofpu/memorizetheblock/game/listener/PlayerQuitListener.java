@@ -15,7 +15,7 @@ public class PlayerQuitListener implements Listener {
 
     @EventHandler
     private void onPlayerQuit(final PlayerQuitEvent event) {
-        logicProcessor.remove(event.getPlayer());
+        logicProcessor.remove(event.getPlayer(), true);
     }
 
     public GameLogicProcessor logicProcessor() {
