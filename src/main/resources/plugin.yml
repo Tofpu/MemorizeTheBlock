@@ -1,0 +1,7 @@
+name: MemorizeTheBlock
+version: ${project.version}
+main: me.tofpu.memorizetheblock.MemorizeTheBlockPlugin
+authors: [ Tofpu ]
+commands:
+  memorize:
+    description: Memorize the block game!
