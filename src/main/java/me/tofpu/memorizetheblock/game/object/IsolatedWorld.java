@@ -8,14 +8,14 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class IsolatedWorld {
-    private UUID uuid = UUID.randomUUID();
+    private final UUID mapUniqueId = UUID.randomUUID();
     private final GameDirector director;
 
     private final GameWorld world;
     private final GameLocation location;
-
     private final ChosenBlock[] chosenBlocks = new ChosenBlock[3];
 
+    private UUID takenBy;
     private boolean initialize = false;
 
     public IsolatedWorld(final GameDirector director) {
@@ -49,16 +49,25 @@ public class IsolatedWorld {
         return this.chosenBlocks;
     }
 
+    public IsolatedWorld takenBy(final UUID takenBy) {
+        this.takenBy = takenBy;
+        return this;
+    }
+
+    public UUID takenBy() {
+        return takenBy;
+    }
+
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (!(o instanceof IsolatedWorld)) return false;
         final IsolatedWorld that = (IsolatedWorld) o;
-        return uuid.equals(that.uuid);
+        return mapUniqueId.equals(that.mapUniqueId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(uuid);
+        return Objects.hash(mapUniqueId);
     }
 }
