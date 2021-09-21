@@ -2,7 +2,7 @@ About
 ---
 **MemorizeTheBlock** is a memory-based plugin. You hop into the game and memorize the three blocks in front of you in a span of seconds, and then place the blocks as you have remembered them in their oriented spot.
 
-It's a **simple**, **fun** and **pleasant** plugin for you to test your memory, pass time or whatever you feel like doing.
+**This is a simple and straightforward plugin for you to test your memory.**
 
 Features
 ---
