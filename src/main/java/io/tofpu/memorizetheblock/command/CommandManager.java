@@ -10,15 +10,18 @@ import org.bukkit.entity.Player;
 
 public final class CommandManager implements CommandExecutor {
     private static CommandManager instance;
+    private final GameDirector director;
 
-    public synchronized static CommandManager of() {
+    public synchronized static CommandManager of(final GameDirector gameDirector) {
         if (instance == null) {
-            instance = new CommandManager();
+            instance = new CommandManager(gameDirector);
         }
         return instance;
     }
 
-    private CommandManager() {}
+    private CommandManager(final GameDirector director) {
+        this.director = director;
+    }
 
     @Override
     public boolean onCommand(final CommandSender sender, final Command command, final String label, final String[] args) {
@@ -27,7 +30,7 @@ public final class CommandManager implements CommandExecutor {
             return false;
         }
         final Player player = (Player) sender;
-        final GameDirector director = MemorizeTheBlock.initialize(null).gameDirector();
+        final GameDirector director = this.director;
         final GameLogicProcess logicProcessor = director.logicProcessor();
 
         if (logicProcessor.isPlaying(player)) {
