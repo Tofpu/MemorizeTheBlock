@@ -17,7 +17,7 @@ public class PlayerMoveListener implements Listener {
         return instance;
     }
 
-    public PlayerMoveListener(final GameLogicProcess logicProcessor) {
+    private PlayerMoveListener(final GameLogicProcess logicProcessor) {
         this.logicProcessor = logicProcessor;
         GameListener.register(this);
     }

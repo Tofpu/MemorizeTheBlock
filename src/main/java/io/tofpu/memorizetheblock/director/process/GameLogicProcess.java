@@ -32,7 +32,7 @@ public class GameLogicProcess {
         return instance;
     }
 
-    public GameLogicProcess(final GameDirector director) {
+    private GameLogicProcess(final GameDirector director) {
         this.director = director;
         this.timer = GameTimer.of(this, director.blockProspectProcessor());
     }

@@ -10,6 +10,8 @@ import java.util.List;
 public class GameListener {
     private static final List<Listener> listeners = new ArrayList<>();
 
+    private GameListener() {}
+
     public static void register(final Listener listener) {
         listeners.add(listener);
     }

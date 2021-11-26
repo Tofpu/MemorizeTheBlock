@@ -11,7 +11,7 @@ public final class MemorizeTheBlockPlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         new Metrics(this, 12787);
-        getCommand("memorize").setExecutor(new CommandManager());
+        getCommand("memorize").setExecutor(CommandManager.of());
 
         MemorizeTheBlock.initialize(this);
     }

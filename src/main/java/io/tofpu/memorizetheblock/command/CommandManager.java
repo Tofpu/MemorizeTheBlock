@@ -9,6 +9,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CommandManager implements CommandExecutor {
+    private static CommandManager instance;
+
+    public synchronized static CommandManager of() {
+        if (instance == null) {
+            instance = new CommandManager();
+        }
+        return instance;
+    }
+
+    private CommandManager() {}
+
     @Override
     public boolean onCommand(final CommandSender sender, final Command command, final String label, final String[] args) {
         if (!(sender instanceof Player)) {

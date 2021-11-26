@@ -24,7 +24,7 @@ public final class BlockProspectProcess {
         return instance;
     }
 
-    public BlockProspectProcess() {
+    private BlockProspectProcess() {
         for (final XMaterial material : XMaterial.values()) {
             switch (material) {
                 case STONE:

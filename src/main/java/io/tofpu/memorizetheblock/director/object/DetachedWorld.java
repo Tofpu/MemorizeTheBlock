@@ -18,12 +18,12 @@ public class DetachedWorld {
     private UUID takenBy;
     private boolean initialize = false;
 
-    public DetachedWorld(final GameDirector director) {
-        this.director = director;
-    }
-
     public static DetachedWorld of(final GameDirector gameDirector) {
         return new DetachedWorld(gameDirector);
+    }
+
+    private DetachedWorld(final GameDirector director) {
+        this.director = director;
     }
 
     public void initialize() {

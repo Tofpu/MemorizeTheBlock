@@ -12,6 +12,8 @@ public final class GameLocation {
         return new GameLocation();
     }
 
+    private GameLocation() {}
+
     public void initialize(final GameDirector director, final World world) {
         if (location != null) throw new IllegalStateException("You cannot reinitialize the game's location twice.");
         this.location = new Location(world, 98 + (director.logicProcessor().players().size() * 8), 100, 100, -180, 2);

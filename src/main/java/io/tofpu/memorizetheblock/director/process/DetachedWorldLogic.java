@@ -19,7 +19,7 @@ public class DetachedWorldLogic {
         return instance;
     }
 
-    public DetachedWorldLogic(final GameDirector gameDirector) {
+    private DetachedWorldLogic(final GameDirector gameDirector) {
         this.gameDirector = gameDirector;
         this.detachedWorlds = new ArrayList<>();
     }

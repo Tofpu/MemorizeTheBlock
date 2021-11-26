@@ -16,7 +16,7 @@ public class BlockBreakListener implements Listener {
         return instance;
     }
 
-    public BlockBreakListener(final GameLogicProcess logicProcessor) {
+    private BlockBreakListener(final GameLogicProcess logicProcessor) {
         this.logicProcessor = logicProcessor;
         GameListener.register(this);
     }

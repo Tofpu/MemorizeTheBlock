@@ -17,7 +17,7 @@ public class MemorizeTicker extends GameTicker {
     private final GameDirector director;
     private final GamePlayer gamePlayer;
 
-    public MemorizeTicker(final GameDirector director, final GamePlayer gamePlayer) {
+    private MemorizeTicker(final GameDirector director, final GamePlayer gamePlayer) {
         this.director = director;
         this.gamePlayer = gamePlayer;
     }

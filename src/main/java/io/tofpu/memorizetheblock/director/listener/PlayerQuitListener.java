@@ -16,7 +16,7 @@ public class PlayerQuitListener implements Listener {
         return instance;
     }
 
-    public PlayerQuitListener(final GameLogicProcess logicProcessor) {
+    private PlayerQuitListener(final GameLogicProcess logicProcessor) {
         this.logicProcessor = logicProcessor;
         GameListener.register(this);
     }

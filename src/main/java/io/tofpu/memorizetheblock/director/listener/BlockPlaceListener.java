@@ -22,7 +22,7 @@ public class BlockPlaceListener implements Listener {
         return instance;
     }
 
-    public BlockPlaceListener(final GameLogicProcess logicProcessor) {
+    private BlockPlaceListener(final GameLogicProcess logicProcessor) {
         this.logicProcessor = logicProcessor;
         GameListener.register(this);
     }

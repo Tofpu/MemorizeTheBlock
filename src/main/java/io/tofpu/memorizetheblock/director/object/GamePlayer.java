@@ -23,7 +23,7 @@ public class GamePlayer {
         return new GamePlayer(director, uniqueId);
     }
 
-    public GamePlayer(final GameDirector director, final UUID uniqueId) {
+    private GamePlayer(final GameDirector director, final UUID uniqueId) {
         this.uniqueId = uniqueId;
         this.player = Bukkit.getPlayer(uniqueId);
 

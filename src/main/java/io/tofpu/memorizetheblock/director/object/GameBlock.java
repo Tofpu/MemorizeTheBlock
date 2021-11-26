@@ -12,7 +12,7 @@ public class GameBlock {
         return new GameBlock(location);
     }
 
-    public GameBlock(final Location location) {
+    private GameBlock(final Location location) {
         this.location = location;
         this.block = location.clone().add(0, 1, 0).getBlock();
 

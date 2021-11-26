@@ -11,6 +11,8 @@ public final class GameWorld {
         return new GameWorld();
     }
 
+    private GameWorld() {}
+
     public void initialize() {
         if (world != null) throw new IllegalStateException("You cannot reinitialize the game's world twice.");
         this.world = WorldCreator.name("MTB").type(WorldType.FLAT).generatorSettings("2;0;1").createWorld();

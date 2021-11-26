@@ -17,7 +17,7 @@ public final class GameDirector {
         return new GameDirector(plugin);
     }
 
-    public GameDirector(final Plugin plugin) {
+    private GameDirector(final Plugin plugin) {
         this.plugin = plugin;
 
         this.blockProspectProcess = BlockProspectProcess.of();
