@@ -9,7 +9,7 @@ public class PlayerQuitListener implements Listener {
     private static PlayerQuitListener instance;
     private final GameLogicProcess logicProcessor;
 
-    public synchronized static PlayerQuitListener initialize(final GameLogicProcess logicProcessor) {
+    public synchronized static PlayerQuitListener of(final GameLogicProcess logicProcessor) {
         if (instance == null) {
             instance = new PlayerQuitListener(logicProcessor);
         }

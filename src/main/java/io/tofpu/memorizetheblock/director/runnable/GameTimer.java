@@ -14,6 +14,10 @@ public class GameTimer extends GameTicker {
     private final GameLogicProcess logicProcessor;
     private final BlockProspectProcess blockProspectProcess;
 
+    public static GameTimer of(final GameLogicProcess logicProcessor, final BlockProspectProcess blockProspectProcess) {
+        return new GameTimer(logicProcessor, blockProspectProcess);
+    }
+
     public GameTimer(final GameLogicProcess logicProcessor, final BlockProspectProcess blockProspectProcess) {
         this.logicProcessor = logicProcessor;
         this.blockProspectProcess = blockProspectProcess;

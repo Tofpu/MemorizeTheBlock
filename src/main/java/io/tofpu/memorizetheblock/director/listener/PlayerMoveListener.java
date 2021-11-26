@@ -10,7 +10,7 @@ public class PlayerMoveListener implements Listener {
     private static PlayerMoveListener instance;
     private final GameLogicProcess logicProcessor;
 
-    public synchronized static PlayerMoveListener initialize(final GameLogicProcess logicProcessor) {
+    public synchronized static PlayerMoveListener of(final GameLogicProcess logicProcessor) {
         if (instance == null) {
             instance = new PlayerMoveListener(logicProcessor);
         }

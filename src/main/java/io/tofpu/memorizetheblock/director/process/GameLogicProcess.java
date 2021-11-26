@@ -18,15 +18,23 @@ import java.util.List;
 import java.util.Map;
 
 public class GameLogicProcess {
+    private static GameLogicProcess instance;
     private final GameDirector director;
     private final GameTimer timer;
 
     private final List<GamePlayer> players = new ArrayList<>();
     private final Map<GamePlayer, Instant> playerDuration = new HashMap<>();
 
+    public synchronized static GameLogicProcess of(final GameDirector director) {
+        if (instance == null) {
+            instance = new GameLogicProcess(director);
+        }
+        return instance;
+    }
+
     public GameLogicProcess(final GameDirector director) {
         this.director = director;
-        this.timer = new GameTimer(this, director.blockProspectProcessor());
+        this.timer = GameTimer.of(this, director.blockProspectProcessor());
     }
 
     private void join(final DetachedWorld detachedWorld, final GamePlayer gamePlayer) {
@@ -59,7 +67,7 @@ public class GameLogicProcess {
         for (final GamePlayer gamePlayer : players) {
             if (gamePlayer.uniqueId().equals(player.getUniqueId())) return gamePlayer;
         }
-        return new GamePlayer(director, player.getUniqueId());
+        return GamePlayer.of(director, player.getUniqueId());
     }
 
     public void remove(final Player player, boolean quitting) {

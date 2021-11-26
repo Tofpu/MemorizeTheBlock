@@ -8,6 +8,10 @@ public class GameBlock {
     private final Location location;
     private final Block block;
 
+    public static GameBlock of(final Location location) {
+        return new GameBlock(location);
+    }
+
     public GameBlock(final Location location) {
         this.location = location;
         this.block = location.clone().add(0, 1, 0).getBlock();

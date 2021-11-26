@@ -19,6 +19,10 @@ public class GamePlayer {
     private final List<GameBlock> pickedBlocks;
     private final Stack<ItemStack> itemStacks;
 
+    public static GamePlayer of(final GameDirector director, final UUID uniqueId) {
+        return new GamePlayer(director, uniqueId);
+    }
+
     public GamePlayer(final GameDirector director, final UUID uniqueId) {
         this.uniqueId = uniqueId;
         this.player = Bukkit.getPlayer(uniqueId);

@@ -11,8 +11,8 @@ public class DetachedWorld {
     private final UUID mapUniqueId = UUID.randomUUID();
     private final GameDirector director;
 
-    private final GameWorld world;
-    private final GameLocation location;
+    private final GameWorld world = GameWorld.of();
+    private final GameLocation location = GameLocation.of();
     private final GameBlock[] gameBlocks = new GameBlock[3];
 
     private UUID takenBy;
@@ -20,8 +20,10 @@ public class DetachedWorld {
 
     public DetachedWorld(final GameDirector director) {
         this.director = director;
-        this.world = new GameWorld();
-        this.location = new GameLocation();
+    }
+
+    public static DetachedWorld of(final GameDirector gameDirector) {
+        return new DetachedWorld(gameDirector);
     }
 
     public void initialize() {
@@ -33,7 +35,7 @@ public class DetachedWorld {
 
         for (int i = 0; i < 3; i++) {
             final int position = i == 0 ? 0 : i == 1 ? 2 : 4;
-            this.gameBlocks[i] = new GameBlock(location.location().clone().add(2 - position, 0, -4));
+            this.gameBlocks[i] = GameBlock.of(location.location().clone().add(2 - position, 0, -4));
         }
     }
 

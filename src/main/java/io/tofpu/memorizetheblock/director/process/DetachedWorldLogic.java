@@ -8,8 +8,16 @@ import java.util.List;
 import java.util.UUID;
 
 public class DetachedWorldLogic {
+    private static DetachedWorldLogic instance;
     private final GameDirector gameDirector;
     private final List<DetachedWorld> detachedWorlds;
+
+    public synchronized static DetachedWorldLogic of(final GameDirector director) {
+        if (instance == null) {
+            instance = new DetachedWorldLogic(director);
+        }
+        return instance;
+    }
 
     public DetachedWorldLogic(final GameDirector gameDirector) {
         this.gameDirector = gameDirector;
@@ -39,7 +47,7 @@ public class DetachedWorldLogic {
                 return detachedWorld;
             }
         }
-        final DetachedWorld detachedWorld = new DetachedWorld(gameDirector);
+        final DetachedWorld detachedWorld = DetachedWorld.of(gameDirector);
         detachedWorld.initialize();
         detachedWorld.takenBy(uniqueId);
         detachedWorlds.add(detachedWorld);

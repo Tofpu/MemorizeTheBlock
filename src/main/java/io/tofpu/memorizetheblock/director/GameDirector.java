@@ -16,16 +16,18 @@ public final class GameDirector {
     public GameDirector(final Plugin plugin) {
         this.plugin = plugin;
 
-        this.blockProspectProcess = new BlockProspectProcess();
-        this.logicProcessor = new GameLogicProcess(this);
-        this.detachedWorldLogic = new DetachedWorldLogic(this);
+        this.blockProspectProcess = BlockProspectProcess.of();
+        this.logicProcessor = GameLogicProcess.of(this);
+        this.detachedWorldLogic = DetachedWorldLogic.of(this);
     }
 
     public void prepare() {
-        PlayerQuitListener.initialize(logicProcessor);
-        BlockPlaceListener.initialize(logicProcessor);
-        BlockBreakListener.initialize(logicProcessor);
-        PlayerMoveListener.initialize(logicProcessor);
+        PlayerQuitListener.of(logicProcessor);
+        BlockPlaceListener.of(logicProcessor);
+        BlockBreakListener.of(logicProcessor);
+        PlayerMoveListener.of(logicProcessor);
+
+        // registering all the listeners
         GameListener.initialize(plugin);
     }
 

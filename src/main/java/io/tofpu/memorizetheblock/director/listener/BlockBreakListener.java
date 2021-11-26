@@ -9,7 +9,7 @@ public class BlockBreakListener implements Listener {
     private static BlockBreakListener instance;
     private final GameLogicProcess logicProcessor;
 
-    public synchronized static BlockBreakListener initialize(final GameLogicProcess logicProcessor) {
+    public synchronized static BlockBreakListener of(final GameLogicProcess logicProcessor) {
         if (instance == null) {
             instance = new BlockBreakListener(logicProcessor);
         }

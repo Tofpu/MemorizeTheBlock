@@ -12,9 +12,17 @@ import java.util.*;
 
 public final class BlockProspectProcess {
     public static final SplittableRandom SPLITTABLE_RANDOM = new SplittableRandom();
+    private static BlockProspectProcess instance;
 
     private final int amount = 3;
     private final List<XMaterial> materials = new ArrayList<>();
+
+    public synchronized static BlockProspectProcess of() {
+        if (instance == null) {
+            instance = new BlockProspectProcess();
+        }
+        return instance;
+    }
 
     public BlockProspectProcess() {
         for (final XMaterial material : XMaterial.values()) {

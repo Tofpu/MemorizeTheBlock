@@ -15,7 +15,7 @@ public class BlockPlaceListener implements Listener {
     private static BlockPlaceListener instance;
     private final GameLogicProcess logicProcessor;
 
-    public synchronized static BlockPlaceListener initialize(final GameLogicProcess logicProcessor) {
+    public synchronized static BlockPlaceListener of(final GameLogicProcess logicProcessor) {
         if (instance == null) {
             instance = new BlockPlaceListener(logicProcessor);
         }
