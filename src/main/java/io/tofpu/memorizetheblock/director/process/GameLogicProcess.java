@@ -1,4 +1,4 @@
-package io.tofpu.memorizetheblock.director.processor;
+package io.tofpu.memorizetheblock.director.process;
 
 import com.avaje.ebean.validation.NotNull;
 import io.tofpu.memorizetheblock.director.GameDirector;

@@ -1,6 +1,6 @@
 package io.tofpu.memorizetheblock.director.listener;
 
-import io.tofpu.memorizetheblock.director.processor.GameLogicProcess;
+import io.tofpu.memorizetheblock.director.process.GameLogicProcess;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;

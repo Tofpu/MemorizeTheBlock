@@ -1,4 +1,4 @@
-package io.tofpu.memorizetheblock.director.processor;
+package io.tofpu.memorizetheblock.director.process;
 
 import io.tofpu.memorizetheblock.director.GameDirector;
 import io.tofpu.memorizetheblock.director.object.DetachedWorld;

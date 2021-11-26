@@ -1,7 +1,7 @@
 package io.tofpu.memorizetheblock.director.listener;
 
 import io.tofpu.memorizetheblock.director.object.GamePlayer;
-import io.tofpu.memorizetheblock.director.processor.GameLogicProcess;
+import io.tofpu.memorizetheblock.director.process.GameLogicProcess;
 import io.tofpu.memorizetheblock.util.GameUtil;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;

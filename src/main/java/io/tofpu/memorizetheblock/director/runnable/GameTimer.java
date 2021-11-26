@@ -1,8 +1,8 @@
 package io.tofpu.memorizetheblock.director.runnable;
 
 import io.tofpu.memorizetheblock.director.object.GamePlayer;
-import io.tofpu.memorizetheblock.director.processor.BlockProspectProcess;
-import io.tofpu.memorizetheblock.director.processor.GameLogicProcess;
+import io.tofpu.memorizetheblock.director.process.BlockProspectProcess;
+import io.tofpu.memorizetheblock.director.process.GameLogicProcess;
 import io.tofpu.memorizetheblock.util.GameUtil;
 import org.bukkit.Sound;
 

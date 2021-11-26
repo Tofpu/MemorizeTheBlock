@@ -1,9 +1,9 @@
 package io.tofpu.memorizetheblock.director;
 
 import io.tofpu.memorizetheblock.director.listener.*;
-import io.tofpu.memorizetheblock.director.processor.BlockProspectProcess;
-import io.tofpu.memorizetheblock.director.processor.GameLogicProcess;
-import io.tofpu.memorizetheblock.director.processor.DetachedWorldLogic;
+import io.tofpu.memorizetheblock.director.process.BlockProspectProcess;
+import io.tofpu.memorizetheblock.director.process.GameLogicProcess;
+import io.tofpu.memorizetheblock.director.process.DetachedWorldLogic;
 import org.bukkit.plugin.Plugin;
 
 public final class GameDirector {

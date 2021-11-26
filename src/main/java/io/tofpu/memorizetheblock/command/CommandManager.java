@@ -2,7 +2,7 @@ package io.tofpu.memorizetheblock.command;
 
 import io.tofpu.memorizetheblock.MemorizeTheBlock;
 import io.tofpu.memorizetheblock.director.GameDirector;
-import io.tofpu.memorizetheblock.director.processor.GameLogicProcess;
+import io.tofpu.memorizetheblock.director.process.GameLogicProcess;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
