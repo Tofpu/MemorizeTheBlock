@@ -42,7 +42,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.bstats</pattern>
-                                    <shadedPattern>me.tofpu.memorizetheblock.bstats</shadedPattern>
+                                    <shadedPattern>io.tofpu.memorizetheblock.bstats</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
