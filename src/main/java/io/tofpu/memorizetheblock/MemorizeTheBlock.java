@@ -12,7 +12,7 @@ public class MemorizeTheBlock {
 
     public MemorizeTheBlock(final Plugin plugin) {
         this.plugin = plugin;
-        this.gameDirector = new GameDirector(plugin);
+        this.gameDirector = GameDirector.of(plugin);
     }
 
     public void initialize() {

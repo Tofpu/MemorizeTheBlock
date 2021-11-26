@@ -13,6 +13,10 @@ public final class GameDirector {
     private final GameLogicProcess logicProcessor;
     private final DetachedWorldLogic detachedWorldLogic;
 
+    public static GameDirector of(final Plugin plugin) {
+        return new GameDirector(plugin);
+    }
+
     public GameDirector(final Plugin plugin) {
         this.plugin = plugin;
 
