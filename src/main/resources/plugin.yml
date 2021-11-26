@@ -1,6 +1,6 @@
 name: MemorizeTheBlock
 version: ${project.version}
-main: me.tofpu.memorizetheblock.MemorizeTheBlockPlugin
+main: io.tofpu.memorizetheblock.plugin.MemorizeTheBlockPlugin
 
 authors: [ Tofpu ]
 api-version: 1.13
