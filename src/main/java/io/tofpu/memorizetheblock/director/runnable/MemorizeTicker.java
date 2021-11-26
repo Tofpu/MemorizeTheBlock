@@ -9,7 +9,7 @@ import org.bukkit.Material;
 
 import java.time.Instant;
 
-public class MemorizeTicker extends GameTicker {
+public final class MemorizeTicker extends GameTicker {
     public static void start(final GameDirector director, final GamePlayer gamePlayer) {
         new MemorizeTicker(director, gamePlayer).resume();
     }

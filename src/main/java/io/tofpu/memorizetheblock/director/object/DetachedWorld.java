@@ -7,7 +7,7 @@ import io.tofpu.memorizetheblock.director.wrapper.GameWorld;
 import java.util.Objects;
 import java.util.UUID;
 
-public class DetachedWorld {
+public final class DetachedWorld {
     private final UUID mapUniqueId = UUID.randomUUID();
     private final GameDirector director;
 

@@ -4,7 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 
-public class GameBlock {
+public final class GameBlock {
     private final Location location;
     private final Block block;
 

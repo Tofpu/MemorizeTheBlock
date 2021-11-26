@@ -4,7 +4,7 @@ import io.tofpu.memorizetheblock.director.GameDirector;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
-public class MemorizeTheBlock {
+public final class MemorizeTheBlock {
     private static MemorizeTheBlock instance;
 
     private final Plugin plugin;

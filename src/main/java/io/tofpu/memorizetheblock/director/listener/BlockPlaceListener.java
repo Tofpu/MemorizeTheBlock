@@ -11,7 +11,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-public class BlockPlaceListener implements Listener {
+public final class BlockPlaceListener implements Listener {
     private static BlockPlaceListener instance;
     private final GameLogicProcess logicProcessor;
 

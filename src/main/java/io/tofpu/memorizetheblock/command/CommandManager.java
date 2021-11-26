@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandManager implements CommandExecutor {
+public final class CommandManager implements CommandExecutor {
     private static CommandManager instance;
 
     public synchronized static CommandManager of() {

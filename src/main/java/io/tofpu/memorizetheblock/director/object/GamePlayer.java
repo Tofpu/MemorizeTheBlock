@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
 
-public class GamePlayer {
+public final class GamePlayer {
     private final UUID uniqueId;
     private final Player player;
 

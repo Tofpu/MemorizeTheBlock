@@ -7,7 +7,7 @@ import org.bukkit.plugin.PluginManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameListener {
+public final class GameListener {
     private static final List<Listener> listeners = new ArrayList<>();
 
     private GameListener() {}

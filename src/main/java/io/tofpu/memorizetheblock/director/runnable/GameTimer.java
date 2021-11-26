@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class GameTimer extends GameTicker {
+public final class GameTimer extends GameTicker {
     private final GameLogicProcess logicProcessor;
     private final BlockProspectProcess blockProspectProcess;
 

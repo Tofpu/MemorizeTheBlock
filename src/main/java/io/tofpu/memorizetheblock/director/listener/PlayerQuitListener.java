@@ -5,7 +5,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-public class PlayerQuitListener implements Listener {
+public final class PlayerQuitListener implements Listener {
     private static PlayerQuitListener instance;
     private final GameLogicProcess logicProcessor;
 

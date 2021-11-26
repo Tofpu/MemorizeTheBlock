@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GameLogicProcess {
+public final class GameLogicProcess {
     private static GameLogicProcess instance;
     private final GameDirector director;
     private final GameTimer timer;

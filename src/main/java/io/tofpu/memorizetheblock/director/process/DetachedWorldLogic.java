@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class DetachedWorldLogic {
+public final class DetachedWorldLogic {
     private static DetachedWorldLogic instance;
     private final GameDirector gameDirector;
     private final List<DetachedWorld> detachedWorlds;
