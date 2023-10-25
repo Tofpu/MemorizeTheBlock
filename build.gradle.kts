@@ -1,6 +1,8 @@
 plugins {
     `java-library`
     `maven-publish`
+    id("xyz.jpenilla.run-paper") version "2.2.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 repositories {
@@ -27,10 +29,26 @@ publishing {
     }
 }
 
-tasks.withType<JavaCompile> {
-    options.encoding = "UTF-8"
-}
+tasks {
+    withType<Javadoc> {
+        options.encoding = "UTF-8"
+    }
 
-tasks.withType<Javadoc> {
-    options.encoding = "UTF-8"
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+    }
+
+    shadowJar {
+        archiveClassifier = ""
+
+        relocate("org.bstats", "io.tofpu.memorizetheblock.libs.bstats")
+    }
+
+    build {
+        dependsOn.add(shadowJar)
+    }
+
+    runServer {
+        minecraftVersion("1.8.8")
+    }
 }
